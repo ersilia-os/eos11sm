@@ -1,6 +1,6 @@
 Identifier: eos11sm
 Slug: known-antibiotic-ressemblance
-Status: In progress
+Status: Ready
 Title: Ressemblance to a curated list of known antibiotics
 Description: A curated list of about 600 known antibiotics from AntibioticDB and
   the Collins lab (MIT) is used as a reference to identify compounds that 
@@ -35,6 +35,16 @@ Publication: https://antibioticdb.com
 Source Code: https://github.com/ersilia-os/ersilia
 License: GPL-3.0-or-later
 Incorporation Date: '2025-11-24'
+Last Packaging Date: '2025-11-25'
+Release: v1.0.0
 S3: https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos11sm.zip
+DockerHub: https://hub.docker.com/r/ersiliaos/eos11sm
+Docker Architecture: AMD64
 Model Size: 6.0
 Environment Size: 778.0
+Image Size: 728.06
+Computational Performance 1: 28.55
+Computational Performance 2: 18.27
+Computational Performance 3: 18.63
+Computational Performance 4: 33.98
+Computational Performance 5: 104.87
