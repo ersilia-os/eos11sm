@@ -2,6 +2,7 @@
 
 A curated list of about 600 known antibiotics from AntibioticDB and the Collins lab (MIT) is used as a reference to identify compounds that ressemble known antibiotics. The tool can be used, for example, to remove unattractive compounds in virtual screening. The ressemblance score is computed using a logistic regression taking into account Tanimoto similarity over multiple molecular fingerprints.
 
+This model was incorporated on 2025-11-24.
 
 
 ## Information
@@ -34,8 +35,11 @@ Below are the **Output Columns** of the model:
 ### Source and Deployment
 - **Source:** `Local`
 - **Source Type:** `Internal`
+- **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos11sm.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos11sm.zip)
 
 ### Resource Consumption
+- **Model Size (Mb):** `6`
+- **Environment Size (Mb):** `778`
 
 
 ### References
