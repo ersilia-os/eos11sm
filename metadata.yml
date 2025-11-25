@@ -35,3 +35,6 @@ Publication: https://antibioticdb.com
 Source Code: https://github.com/ersilia-os/ersilia
 License: GPL-3.0-or-later
 Incorporation Date: '2025-11-24'
+S3: https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos11sm.zip
+Model Size: 6.0
+Environment Size: 778.0
