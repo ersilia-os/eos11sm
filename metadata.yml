@@ -35,16 +35,16 @@ Publication: https://antibioticdb.com
 Source Code: https://github.com/ersilia-os/ersilia
 License: GPL-3.0-or-later
 Incorporation Date: '2025-11-24'
-Last Packaging Date: '2025-11-25'
+Last Packaging Date: '2025-12-17'
 Release: v1.0.0
 S3: https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos11sm.zip
 DockerHub: https://hub.docker.com/r/ersiliaos/eos11sm
 Docker Architecture: AMD64
 Model Size: 6.0
 Environment Size: 777.0
-Image Size: 728.06
-Computational Performance 1: 28.55
-Computational Performance 2: 18.27
-Computational Performance 3: 18.63
-Computational Performance 4: 33.98
-Computational Performance 5: 104.87
+Image Size: 728.9
+Computational Performance 1: 28.35
+Computational Performance 2: 18.11
+Computational Performance 3: 18.47
+Computational Performance 4: 33.8
+Computational Performance 5: 103.36
