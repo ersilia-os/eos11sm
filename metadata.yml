@@ -5,9 +5,9 @@ Title: Resemblance to a curated list of known antibiotics
 Description: A curated list of about 600 known antibiotics from AntibioticDB and
   the Collins lab (MIT) is used as a reference to identify compounds that 
   resemble known antibiotics. The tool can be used, for example, to remove 
-  unattractive compounds in virtual screening. The resemblance score is 
-  computed using a logistic regression taking into account Tanimoto similarity 
-  over multiple molecular fingerprints.
+  unattractive compounds in virtual screening. The resemblance score is computed
+  using a logistic regression taking into account Tanimoto similarity over 
+  multiple molecular fingerprints.
 Deployment:
   - Local
 Source: Local
