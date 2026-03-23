@@ -47,26 +47,38 @@ def get_X(smiles_list):
         idx_1 = 0
         idx_3 = 2
         for smiles in smiles_list:
-            result = fpe.top_k(smiles, k=k, threshold=0.0, metric='tanimoto', n_workers=1)
-            k1s += [float(result[idx_1][1])]
-            k3s += [float(result[idx_3][1])]
+            try:
+                result = fpe.top_k(smiles, k=k, threshold=0.0, metric='tanimoto', n_workers=1)
+                k1s += [float(result[idx_1][1])]
+                k3s += [float(result[idx_3][1])]
+            except Exception:
+                k1s += [None]
+                k3s += [None]
         R += [k1s, k3s]
         headers += [f"{fp_name}_k1", f"{fp_name}_k3"]
-    X = np.array(R).T
+    X = np.array(R, dtype=float).T
     return X
 
 # run
 X = get_X(smiles_list)
-outputs = lr_model.predict_proba(X)[:, 1].tolist()
 
-# check input and output have the same lenght
-input_len = len(smiles_list)
-output_len = len(outputs)
-assert input_len == output_len
+# track which molecules have any NaN (failed) so we can emit empty rows for them
+failed = np.any(np.isnan(X), axis=1)
+
+outputs = [None] * len(smiles_list)
+valid_indices = [i for i in range(len(smiles_list)) if not failed[i]]
+if valid_indices:
+    X_valid = X[valid_indices]
+    preds = lr_model.predict_proba(X_valid)[:, 1].tolist()
+    for idx, pred in zip(valid_indices, preds):
+        outputs[idx] = pred
 
 # write output in a .csv file
 with open(output_file, "w") as f:
     writer = csv.writer(f)
     writer.writerow(["abx_score"])
     for o in outputs:
-        writer.writerow([o])
+        if o is None:
+            writer.writerow([""])
+        else:
+            writer.writerow([o])
