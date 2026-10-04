@@ -1,6 +1,6 @@
 # Resemblance to a curated list of known antibiotics
 
-A curated list of about 600 known antibiotics from AntibioticDB and the Collins lab (MIT) is used as a reference to identify compounds that resemble known antibiotics. The tool can be used, for example, to remove unattractive compounds in virtual screening. The resemblance score is computed using a logistic regression taking into account Tanimoto similarity over multiple molecular fingerprints.
+Measures how closely a compound resembles established antibacterial drugs, benchmarked against a curated reference of roughly 600 known antibiotics drawn from AntibioticDB and the Collins laboratory at MIT. The score is intended for triage, letting compounds structurally remote from any known antibiotic be set aside or, conversely, deliberately sought when novel chemotypes are the goal. Resemblance to existing antibiotics is a statement about structure and carries no prediction of antibacterial activity.
 
 This model was incorporated on 2025-11-24.Last packaged on 2026-03-23.
 
@@ -23,7 +23,7 @@ This model was incorporated on 2025-11-24.Last packaged on 2026-03-23.
 ### Output
 - **Output Dimension:** `1`
 - **Output Consistency:** `Fixed`
-- **Interpretation:** A score of 1 indicates high resemblance to known antibiotics, while a score of 0 indicates low resemblance.
+- **Interpretation:** Resemblance to known antibiotics, where values near 1 indicate high structural similarity.
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
