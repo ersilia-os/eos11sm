@@ -1,6 +1,6 @@
 name: Try Apptainer build
 
-# Test only: lives on the apptainer-test branch, never on main
+# Test only: lives on the apptainer-test branch. No changes to main
 on:
   push:
     branches:
