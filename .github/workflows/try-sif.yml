@@ -13,4 +13,9 @@ jobs:
       repo_name: eos11sm
       version: v1.0.1
       runner: ubuntu-latest
-      dry_run: true
+      dry_run: false
+      scripts_ref: apptainer-sif
+    secrets:
+      AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
