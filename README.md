@@ -2,7 +2,7 @@
 
 Measures how closely a compound resembles established antibacterial drugs, benchmarked against a curated reference of roughly 600 known antibiotics drawn from AntibioticDB and the Collins lab (MIT). A logistic regression combines Tanimoto similarities to the nearest reference antibiotics across five fingerprint types, among them Morgan, MACCS and atom pair. The score is meant for triage, letting compounds structurally remote from any known antibiotic be set aside or deliberately sought when novel chemotypes are the goal, and it says nothing about actual antibacterial activity.
 
-This model was incorporated on 2025-11-24.Last packaged on 2026-03-23.
+This model was incorporated on 2025-11-24.Last packaged on 2026-10-07.
 
 ## Information
 ### Identifiers
@@ -35,18 +35,18 @@ Below are the **Output Columns** of the model:
 - **Source:** `Local`
 - **Source Type:** `Internal`
 - **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos11sm](https://hub.docker.com/r/ersiliaos/eos11sm)
-- **Docker Architecture:** `AMD64`
+- **Docker Architecture:** `AMD64`, `ARM64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos11sm.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos11sm.zip)
 
 ### Resource Consumption
 - **Model Size (Mb):** `6`
 - **Environment Size (Mb):** `815`
-- **Image Size (Mb):** `733.1`
+- **Image Size (Mb):** `770.71`
 
 **Computational Performance (seconds):**
-- 10 inputs: `36.22`
-- 100 inputs: `28.33`
-- 10000 inputs: `138.61`
+- 10 inputs: `29.48`
+- 100 inputs: `17.63`
+- 10000 inputs: `102.26`
 
 ### References
 - **Source Code**: [https://github.com/ersilia-os/ersilia](https://github.com/ersilia-os/ersilia)
