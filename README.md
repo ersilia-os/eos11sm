@@ -1,6 +1,6 @@
 # Resemblance to a curated list of known antibiotics
 
-Measures how closely a compound resembles established antibacterial drugs, benchmarked against a curated reference of roughly 600 known antibiotics drawn from AntibioticDB and the Collins laboratory at MIT. The score is intended for triage, letting compounds structurally remote from any known antibiotic be set aside or, conversely, deliberately sought when novel chemotypes are the goal. Resemblance to existing antibiotics is a statement about structure and carries no prediction of antibacterial activity.
+Measures how closely a compound resembles established antibacterial drugs, benchmarked against a curated reference of roughly 600 known antibiotics drawn from AntibioticDB and the Collins lab (MIT). A logistic regression combines Tanimoto similarities to the nearest reference antibiotics across five fingerprint types, among them Morgan, MACCS and atom pair. The score is meant for triage, letting compounds structurally remote from any known antibiotic be set aside or deliberately sought when novel chemotypes are the goal, and it says nothing about actual antibacterial activity.
 
 This model was incorporated on 2025-11-24.Last packaged on 2026-03-23.
 
@@ -23,7 +23,7 @@ This model was incorporated on 2025-11-24.Last packaged on 2026-03-23.
 ### Output
 - **Output Dimension:** `1`
 - **Output Consistency:** `Fixed`
-- **Interpretation:** Resemblance to known antibiotics, where values near 1 indicate high structural similarity.
+- **Interpretation:** Probability of belonging to a reference set of 591 known antibiotics, scored by multi-fingerprint Tanimoto similarity.
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
