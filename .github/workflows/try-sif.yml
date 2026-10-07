@@ -1,0 +1,16 @@
+name: Try Apptainer build
+
+# Test only: lives on the apptainer-test branch, never on main
+on:
+  push:
+    branches:
+      - apptainer-test
+
+jobs:
+  build-sif:
+    uses: ersilia-os/ersilia-model-workflows/.github/workflows/build-upload-sif.yml@apptainer-sif
+    with:
+      repo_name: eos11sm
+      version: v1.0.1
+      runner: ubuntu-latest
+      dry_run: true
