@@ -2,14 +2,14 @@ Identifier: eos11sm
 Slug: known-antibiotic-resemblance
 Status: Ready
 Title: Resemblance to a curated list of known antibiotics
-Description: Measures how closely a compound resembles established antibacterial drugs,
-  benchmarked against a curated reference of roughly 600 known antibiotics drawn from
-  AntibioticDB and the Collins lab (MIT). A logistic regression combines Tanimoto
-  similarities to the nearest reference antibiotics across five fingerprint types,
-  among them Morgan, MACCS and atom pair. The score is meant for triage, letting compounds
-  structurally remote from any known antibiotic be set aside or deliberately sought
-  when novel chemotypes are the goal, and it says nothing about actual antibacterial
-  activity.
+Description: Measures how closely a compound resembles established antibacterial
+  drugs, benchmarked against a curated reference of roughly 600 known 
+  antibiotics drawn from AntibioticDB and the Collins lab (MIT). A logistic 
+  regression combines Tanimoto similarities to the nearest reference antibiotics
+  across five fingerprint types, among them Morgan, MACCS and atom pair. The 
+  score is meant for triage, letting compounds structurally remote from any 
+  known antibiotic be set aside or deliberately sought when novel chemotypes are
+  the goal, and it says nothing about actual antibacterial activity.
 Deployment:
   - Local
 Source: Local
@@ -23,8 +23,8 @@ Output:
   - Score
 Output Dimension: 1
 Output Consistency: Fixed
-Interpretation: Probability of belonging to a reference set of 591 known antibiotics,
-  scored by multi-fingerprint Tanimoto similarity.
+Interpretation: Probability of belonging to a reference set of 591 known 
+  antibiotics, scored by multi-fingerprint Tanimoto similarity.
 Tag:
   - Antimicrobial activity
 Biomedical Area:
@@ -43,6 +43,7 @@ Release: v1.0.1
 S3: https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos11sm.zip
 DockerHub: https://hub.docker.com/r/ersiliaos/eos11sm
 Docker Architecture: AMD64
+Apptainer: https://models-sif.s3.eu-north-1.amazonaws.com/eos11sm_v1.sif
 Model Size: 6.0
 Environment Size: 785.0
 Image Size: 733.1
