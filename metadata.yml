@@ -45,6 +45,7 @@ DockerHub: https://hub.docker.com/r/ersiliaos/eos11sm
 Docker Architecture:
   - AMD64
   - ARM64
+Apptainer: https://models-sif.s3.eu-north-1.amazonaws.com/eos11sm_v1.sif
 Model Size: 6.0
 Environment Size: 815.0
 Image Size: 770.71
