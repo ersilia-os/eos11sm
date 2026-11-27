@@ -2,7 +2,8 @@
 
 Measures how closely a compound resembles established antibacterial drugs, benchmarked against a curated reference of roughly 600 known antibiotics drawn from AntibioticDB and the Collins lab (MIT). A logistic regression combines Tanimoto similarities to the nearest reference antibiotics across five fingerprint types, among them Morgan, MACCS and atom pair. The score is meant for triage, letting compounds structurally remote from any known antibiotic be set aside or deliberately sought when novel chemotypes are the goal, and it says nothing about actual antibacterial activity.
 
-This model was incorporated on 2025-11-24.Last packaged on 2026-10-07.
+This model was incorporated on 2025-11-24.
+Last packaged on 2026-10-07.
 
 ## Information
 ### Identifiers
